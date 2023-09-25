@@ -9,12 +9,10 @@ const Experience2 = ({ db }) => {
       var mm = String(today.getMonth() + 1).padStart(2, "0"); //January is 0!
       var yyyy = today.getFullYear();
 
-      today = mm + "/" + dd + "/" + yyyy;
+      const date = mm + "/" + dd + "/" + yyyy;
       const docRef = await addDoc(collection(db, "expVisits"), {
-        date: today,
-        time: `${today.getHours() % 12} ${
-          today.getHours() >= 12 ? "am" : "pm"
-        }`,
+        date: date,
+        time: `${today.getHours() % 12} ${today.getHours() < 12 ? "am" : "pm"}`,
       });
     } catch (e) {
       console.error("Error adding document: ", e);
