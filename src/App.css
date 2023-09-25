@@ -1,38 +1,163 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  min-height: 100vh;
 }
 
-.App-link {
-  color: #61dafb;
+.navBarButton,
+.activeNavButton {
+  background: none;
+  border: none;
+  font-size: max(11px, 2.5vmin);
+  padding-left: 2vw;
+  text-decoration: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.navBarButton {
+  color: gray;
+}
+
+.activeNavButton {
+  color: black;
+}
+
+.navBarButton:hover {
+  cursor: pointer;
+  color: black;
+}
+
+.navBar {
+  margin-right: 2vw;
+  margin-top: 2vh;
+}
+
+footer {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 2vh;
+  margin-top: 1vh;
+  flex-shrink: 0;
+}
+
+.footerLink {
+  color: gray;
+  font-size: max(4vmin, 18px);
+  padding-left: 1vw;
+}
+.footerLink:hover {
+  color: black;
+  cursor: pointer;
+}
+
+.homePage {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+}
+
+.sportsPage {
+  flex: 1;
+}
+
+.homeImg {
+  margin-left: 3vw;
+  margin-right: 3vw;
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+  width: 60vmin;
+  height: 80vmin;
+  border-radius: 4vmin;
+  border: none;
+}
+
+h1,
+h2,
+h3 {
+  text-decoration: none;
+  font-weight: lighter;
+  color: rgb(24, 85, 36);
+  margin-right: 3vw;
+}
+
+.experienceElement {
+  display: flex;
+  flex-direction: column;
+  margin-left: 3vw;
+}
+
+.experienceBody {
+  margin-left: 2vw;
+  margin-right: 2vw;
+  margin-top: 2vh;
+  flex: 1;
+}
+
+.experienceHeader {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  margin-top: 0;
+  margin-bottom: 0;
+
+  &:hover {
+    cursor: pointer;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+.sportsHeader {
+  margin-left: 3vw;
+
+  &:hover {
+    cursor: pointer;
   }
+}
+
+.experienceItem {
+  color: gray;
+}
+
+.experienceItemHeader {
+  color: rgb(68, 67, 67);
+  text-indent: 3vw;
+}
+
+.experienceList {
+  list-style-type: none;
+  margin-left: 2vw;
+}
+.experienceList > li {
+  text-indent: -2.3vw;
+  padding-top: 1vh;
+  margin-left: 2vw;
+}
+.experienceList > li:before {
+  content: "--  ";
+  text-indent: -2vw;
+}
+
+.teamPic {
+  width: min(max(40vmin, 30vw), 300px);
+  height: min(max(30vmin, 23vw), 225px);
+  border-radius: 2vmin;
+  margin-left: 3vw;
+  margin-right: 3vw;
+}
+.teamContent {
+  display: flex;
+  flex-direction: row;
+  padding: 2vmin;
+}
+
+.sportContent {
+  margin-left: 5vw;
+}
+
+.projectLink {
+  text-decoration: none;
+  color: darkblue;
+}
+
+.projectLink:hover {
+  cursor: pointer;
+  color: lightblue;
 }
