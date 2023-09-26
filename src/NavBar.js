@@ -23,6 +23,14 @@ const NavBar = () => {
       >
         Experience
       </NavLink>
+      <NavLink
+        className={({ isActive }) =>
+          isActive ? "activeNavButton" : "navBarButton"
+        }
+        to="projects"
+      >
+        Projects
+      </NavLink>
 
       <NavLink
         className={({ isActive }) =>

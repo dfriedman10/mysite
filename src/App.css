@@ -8,7 +8,6 @@
 .activeNavButton {
   background: none;
   border: none;
-  font-size: max(11px, 2.5vmin);
   padding-left: 2vw;
   text-decoration: none;
 }
@@ -64,8 +63,8 @@ footer {
   margin-right: 3vw;
   margin-top: 3vh;
   margin-bottom: 3vh;
-  width: 60vmin;
-  height: 80vmin;
+  width: min(100vmin, 60vw);
+  height: min(75vmin, 45vw);
   border-radius: 4vmin;
   border: none;
 }
@@ -77,6 +76,23 @@ h3 {
   font-weight: lighter;
   color: rgb(24, 85, 36);
   margin-right: 3vw;
+}
+
+h1 {
+  font-size: max(20px, min(35px, 4vmin));
+}
+h2 {
+  font-size: max(18px, min(28px, 3vmin));
+}
+h3 {
+  font-size: max(16px, min(24px, 2.5vmin));
+}
+a,
+p {
+  font-size: max(15px, min(23px, 2.25vmin));
+}
+li {
+  font-size: max(14px, min(22px, 2vmin));
 }
 
 .experienceElement {
@@ -136,13 +152,15 @@ h3 {
 }
 
 .teamPic {
-  width: min(max(40vmin, 30vw), 300px);
-  height: min(max(30vmin, 23vw), 225px);
+  min-width: 300px;
+  max-width: max(40vmin, 30vw);
+  /* width: min(max(40vmin, 30vw), 300px); */
+  min-height: 225px;
+  max-height: max(30vmin, 23vw);
+  /* height: min(max(30vmin, 23vw), 225px); */
   border-radius: 2vmin;
-  margin-left: 3vw;
-  margin-right: 3vw;
 }
-.teamContent {
+.sportSubcontent {
   display: flex;
   flex-direction: row;
   padding: 2vmin;
@@ -160,4 +178,59 @@ h3 {
 .projectLink:hover {
   cursor: pointer;
   color: lightblue;
+}
+.teamPicSubtitle {
+  min-width: 300px;
+  max-width: max(40vmin, 30vw);
+}
+
+.teamContent {
+  flex: 1;
+}
+
+.classPic {
+  width: 25vw;
+  height: 18vw;
+  border-radius: 1.5vmin;
+}
+
+@media (max-width: 900px) {
+  .classPic {
+    display: none;
+  }
+  .robotVideo {
+    display: none;
+  }
+}
+@media (max-width: 700px) {
+  .sportSubcontent {
+    flex-direction: column;
+  }
+  .homePage {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .homeImg {
+    width: 84vmin;
+    height: 63vmin;
+  }
+}
+
+.robotVideo {
+  width: 25vw;
+  height: 18vw;
+}
+
+.projectLink {
+  color: rgb(112, 28, 121);
+  font-size: max(20px, min(35px, 4vmin));
+  font-weight: lighter;
+  margin-left: 5vw;
+}
+.projectDesc {
+  margin-left: 8vw;
+  margin-right: 5vw;
+  max-width: 750px;
+  color: gray;
 }

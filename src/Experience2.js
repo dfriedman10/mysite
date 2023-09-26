@@ -62,7 +62,7 @@ const KingsExperience = () => {
             <img
               className="teamPic"
               alt="kingspic1"
-              src={require("./KingsPic1.JPG")}
+              src={require("./KingsPic1.jpg")}
             />
           </div>
           <h3>Head of CS Course Development (2019-2020)</h3>
@@ -77,7 +77,7 @@ const KingsExperience = () => {
             <img
               className="teamPic"
               alt="kingspic2"
-              src={require("./KingsPic2.JPG")}
+              src={require("./KingsPic2.jpg")}
               style={{ filter: "brightness(1.3)" }}
             />
             <p style={{ maxWidth: "50vw" }}>

@@ -31,7 +31,9 @@ function App() {
       <NavBar></NavBar>
       <Routes>
         <Route exact path="/" element={<Home db={db} />} />
-        <Route exact path="/experience" element={<Experience2 db={db} />} />
+        <Route exact path="/experience" element={<Experience db={db} />} />
+        <Route exact path="/projects" element={<PersonalProjects db={db} />} />
+
         <Route
           exact
           path="coaching-sports"
